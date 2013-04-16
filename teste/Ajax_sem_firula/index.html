@@ -1,0 +1,25 @@
+<HTML>
+    <head>
+        <title>
+            AJAX - Teste.
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Language" content="pt-br"/>
+        <script src="script.js" type="text/javascript" language="javascript"></script>
+    </head>
+    <body>
+        <FORM id="form1" method="post" action="" onSubmit="return enviar_form(this)" > <!-- Na submissÃ£o do form, retorna valor do Ajax -->
+            <div id="dept">
+                <FIELDSET>
+                    <legend>Cadastro de Departamento</legend>
+                    <label for="departamento">Departamento</label>
+                    <input type="text" id="departamento" name="departamento" class="campo" size="20"/>
+                    <BR>
+                    <input type="submit" id="enviar"  name="enviar" value ="Enviar" />
+                    <BR>
+                    <span id="msg"></span><!-- Span que vai receber os dados da resposta da requisiÃ§Ã£o do AJAX -->
+                </FIELDSET>
+            </div>
+        </FORM>
+    </body>
+</HTML>

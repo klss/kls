@@ -1,0 +1,110 @@
+/* 
+    Document   : geral
+    Created on : 03/03/2013, 18:21:48
+    Author     : Samuel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background: none repeat scroll 0 0 #3A5FCD;
+}
+.geral{
+    margin: 10px auto;
+    width: 940px;
+}
+
+.tile {
+    position: relative;
+    float: left;
+    display: inline-block;
+    margin: 7px 14px 7px 0; 
+}
+
+.tile.single {
+    width: 163px;
+    height: 170px; 
+}
+
+.tile.double {
+    width: 340px;
+    height: 170px; 
+}
+.branco {
+    background-color: #FFFFFF;
+}
+
+.branco:hover {
+    background-color: #F1EFE6;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    z-index: 9999;
+}
+
+.icon-ok {
+    color: #00FF00;
+    font-size: 30px;
+    width: 20px;
+    float: left;
+}
+
+.icon-ok::before {
+    content: "\2714";
+    font-family: 'IconicFill';
+}
+
+.icon-invalid {
+    color: #FF0000;
+    font-size: 30px;
+    width: 20px;
+}
+.icon-invalid::before {
+    content: "\2718";
+    font-family: 'IconicFill';
+}
+
+.tnt {
+    border-radius: 50%;
+    border: 5px solid #000;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border: 0;
+    background-color: rgba(11, 78, 41, 0.3);
+    position: absolute;
+    top: 320px;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 36px;
+}
+button:hover{
+    background-color: rgba(11, 78, 41, 0.6);
+    font-size: 45px;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); 
+}
+
+[data-dir='next'] {
+    left: 1100px; 
+}

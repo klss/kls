@@ -1,0 +1,86 @@
+Requisição GET comum:
+elemento.onclick = function(){
+ var ajax = new myAjax();
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}
+
+Requisição GET com função executando ao fim do carregamento:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ complete: function(){
+ alert("Funciona!!! <img src='http://forum.imasters.com.br/public/style_emoticons/<#EMO_DIR#>/biggrin.gif' class='bbc_emoticon' alt=':D' />");
+ }
+ });
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}
+ou
+
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ complete: funcao //nome da função sem parênteses...
+});
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}
+ou
+
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ complete: [funcao1, funcao2, funcao3] //array de funções, também com o nome da função sem parênteses...
+});
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+ }
+
+
+Requisição POST:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ method: "POST",
+ params: "var1=teste&var2=teste"
+ });
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}
+
+Se não quiser mostrar diretamente a resposta da requisição:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ method: "POST",
+ params: "var1=teste&var2=teste",
+ showResponse: false //opicional... Na versão 1.0, basta apenas omitir o segundo parâmetro do método load abaixo...
+ });
+ ajax.load("pagina.php");
+ }
+
+Manipulando o retorno da requisição:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ method: "POST",
+ params: "var1=teste&var2=teste",
+ showResponse: false,
+ complete: function(){
+ var respota = this.getText(); //retorna o valor da resposta enviada pela requisição...
+ if(resposta == algum_valor){
+ funcao1();
+ } else {
+ funcao2();
+ }
+ }
+ });
+ ajax.load("pagina.php");
+ }
+Ajax dentro de Ajax:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ complete: function(){
+ var ajax2 = new myAjax();
+ ajax2.load("pagina2.php", "content");
+ }
+ });
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}
+Personalizando a mensagem de loading:
+elemento.onclick = function(){
+ var ajax = new myAjax({
+ contentLoading: "<img src='loading.gif' alt='Carregando...'/>"
+ });
+ ajax.load("pagina.php", "ID do elemento que receberá a resposta");
+}

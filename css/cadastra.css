@@ -1,0 +1,18 @@
+/* 
+    Document   : cadastra
+    Created on : 25/03/2013, 21:29:07
+    Author     : Samuel
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+#form-produto {
+    background: #FFFFFF;
+    border: 1px solid #AAAAAA;
+    margin: 0px auto;
+    width: 400px;
+}
